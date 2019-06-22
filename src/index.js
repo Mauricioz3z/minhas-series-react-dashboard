@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Login from './login/login'
 import Logout from './login/logout'
+import Series from './series/series'
 import { Router, Route, browserHistory } from 'react-router'
 
 function usuarioLogado(nextState, replace) {
@@ -16,7 +17,7 @@ ReactDOM.render(<Router history={browserHistory}>
     <Route path='/' component={Login} />
 
     <Route path='/dashboard' onEnter={usuarioLogado} component={App} >
-        
+    <Route path='/series' component={Series} />
     </Route>
     <Route path='/logout' component={Logout} />
     
